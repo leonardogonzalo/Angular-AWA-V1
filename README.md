@@ -1,1 +1,1 @@
-<center># Angular-AWA-V1<center>
+# Angular-AWA-V1
