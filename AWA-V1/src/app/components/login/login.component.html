@@ -1,0 +1,46 @@
+<div class="animated fadeInDown">
+    <!-- Default form login -->
+    <form [formGroup]='formulario' (ngSubmit)='login()'
+    class="text-center border border-light p-5">
+
+        <p class="h4 mb-4">Sign in</p>
+
+        <!-- Email -->
+        <input 
+        formControlName='email'
+        type="email" 
+         class="form-control mb-4" placeholder="E-mail">
+
+        <!-- Password -->
+        <input
+        formControlName='password'
+        type="password" 
+         class="form-control mb-4" placeholder="Password">
+
+        <div class="d-flex justify-content-around">
+            <div>
+                <!-- Remember me -->
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                    <label class="custom-control-label" for="defaultLoginFormRemember">Recuerdame</label>
+                </div>
+            </div>
+            <div>
+                <!-- Forgot password -->
+                <a href="">¿Recordar password?</a>
+            </div>
+        </div>
+
+        <!-- Sign in button -->
+        <button class="btn btn-primary btn-block my-4" type="submit">Ingresar</button>
+
+        <!-- Register -->
+        <p>¿No tienes usuario?
+            <a href='/registro'>Registrate</a>
+        </p>
+
+
+    </form>
+    <!-- Default form login -->
+</div>
+

@@ -1,0 +1,56 @@
+<div class="animated fadeInDown">
+    <form [formGroup]="formulario" (ngSubmit)="registrarUser()"
+    class="text-center border border-light p-5" >
+        <p class="h4 mb-4">Registro</p>
+        <div class="form-row ">
+            <div class="col">
+                <!-- user name-->
+                <input 
+                type="text"
+                formControlName="nombre"
+                class="form-control" placeholder="Nombre de usuario">
+                <small class="form-text text-muted text-danger">
+                    El usuario ya existe
+                </small>
+            </div>
+        </div>
+        <!-- E-mail -->
+        <input 
+        type="email" 
+        formControlName="email"
+        class="form-control" placeholder="E-mail">
+        <small class="form-text text-muted text-danger">
+            Ingrese un correo válido
+        </small>
+        <!-- Password -->
+        <input 
+        type="password" 
+        formControlName="password"
+        class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <small class="form-text text-muted text-danger">
+            No coincide el password
+        </small>
+        <!-- Re-Password -->
+        <input type="password" 
+        class="form-control" 
+        placeholder="Re-Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <small class="form-text text-muted text-danger">
+            No coincide el password
+        </small>
+        <!--Paises-->
+        <select class="form-control selectpicker mb-5" multiple title="Choose one of the following...">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
+          
+
+        <!-- Sign up button -->
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+
+    </form>
+
+    <pre>
+        values : {{ formulario.value | json }}
+     </pre>
+</div>
